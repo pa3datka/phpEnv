@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Pa3datka;
 
 
@@ -36,18 +35,18 @@ final class Env
 
     private function getEnvironment(): void
     {
-        $env = $this->getText();
-        $this->getMath($env);
+        $env = $this->getEnv();
+        $this->setEnvironment($env);
     }
 
-    private function getText(): string
+    private function getEnv(): string
     {
         $path = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . '.env';
 
         return file_get_contents($path);
     }
 
-    private function getMath($env): void
+    private function setEnvironment($env): void
     {
         $this->environment = [];
 
