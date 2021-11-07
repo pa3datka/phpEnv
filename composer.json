@@ -1,0 +1,20 @@
+{
+    "name": "pa3datka/php-env",
+    "description": "Reading enviroment varibles .env",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Aliaksei Reut",
+            "email": "pa3datka@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pa3datka\\": "src/"
+        }
+    }
+}
