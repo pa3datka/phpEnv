@@ -1,5 +1,5 @@
 {
-    "name": "pa3datka/php-env",
+    "name": "pa3datka/phpenv",
     "description": "Reading enviroment varibles .env",
     "type": "library",
     "authors": [
@@ -8,7 +8,6 @@
             "email": "pa3datka@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php": ">=7.4"
     },
