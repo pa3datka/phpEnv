@@ -50,7 +50,7 @@ final class Env
     {
         $this->environment = [];
 
-        if (preg_match_all('#([A-Z\d_]*)=(.*)\n#', $env, $math)) {
+        if (preg_match_all('#([A-Z\d_]*)=(.*)#', $env, $math)) {
             $cntArr = count($math[1]);
             for ($i = 0; $i < $cntArr; $i++) {
                 $this->environment[$math[1][$i]] = $math[2][$i];
