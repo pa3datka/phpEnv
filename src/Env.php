@@ -19,11 +19,11 @@ final class Env
         return self::$instance;
     }
 
-    public static function env(string $value, string $default = ''): string
+    public static function env(string $value, string $default = '')
     {
         $envClass = self::getInstance();
 
-        return $envClass->getValue($value, $default);
+        return self::convertResultIsBool($envClass->getValue($value, $default));
     }
 
     private function getValue(string $value, string $default): string
@@ -61,6 +61,13 @@ final class Env
     public function __wakeup()
     {
         throw new \Exception("Cannot unserialize a singleton.");
+    }
+
+    private static function convertResultIsBool($value)
+    {
+        $value === 'true' && $value = true;
+        $value === 'false' && $value = false;
+        return $value;
     }
 
     protected function __clone() { }
